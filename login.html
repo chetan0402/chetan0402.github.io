@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login to continue</title>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<body onload="login();">
+	<div class="topnav">
+		<a href="welcome.html">Home</a>
+	</div>
+	<div class="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		Email1: example@example.com Password1:- example123## <br>Email2:- example2@example.com Password2:- example2123
+	</div>
+	<div class="wrong_id">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;&nbsp;</span>
+		Wrong Email or Password
+	</div>
+	<div class="login_for_web">
+		<form method="POST" name="main_form" id="form">
+			<table>
+				<tr>
+					<td colspan="2">
+						<h4 style="font-size: 30px">Login to continue</h4>
+						<hr>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size: 20px;">E-Mail:</td>
+					<td><input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="InvalidMsg(this,'email')" oninput="InvalidMsg(this,'email')" autofocus style="width: 200px;"></td>
+				</tr>
+				<tr>
+					<td style="font-size: 20px;">Password:</td>
+					<td><input type="password" name="pwd" required pattern=".{8,}" oninvalid="InvalidMsg(this,'password')" oninput="InvalidMsg(this,'password')" style="width: 200px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<input type="reset" style="font-family: inherit;font-size: 15px;">
+							<input type="submit" style="font-family: inherit;font-size: 15px;">
+						</center>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
