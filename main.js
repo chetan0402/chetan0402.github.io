@@ -86,4 +86,74 @@ function t_items() {
 		var t_items = t_items+parseInt(localStorage.getItem('watch5'));
 	}
 	document.getElementById('no_items').innerText = t_items;
+	return t_items;
+}
+
+function load_cart() {
+	var watch1 = localStorage.getItem('watch1');
+	var watch2 = localStorage.getItem('watch2');
+	var watch3 = localStorage.getItem('watch3');
+	var watch4 = localStorage.getItem('watch4');
+	var watch5 = localStorage.getItem('watch5');
+	if (watch1!==null) {
+		document.getElementById('watch1_quan').innerText = watch1;
+	} else {
+		document.getElementById('watch1_cart').style.display = 'none';
+	}
+	if (watch2!==null) {
+		document.getElementById('watch2_quan').innerText = watch2;
+	} else {
+		document.getElementById('watch2_cart').style.display = 'none';
+	}
+	if (watch3!==null) {
+		document.getElementById('watch3_quan').innerText = watch3;
+	} else {
+		document.getElementById('watch3_cart').style.display = 'none';
+	}
+	if (watch4!==null) {
+		document.getElementById('watch4_quan').innerText = watch4;
+	} else {
+		document.getElementById('watch4_cart').style.display = 'none';
+	}
+	if (watch5!==null) {
+		document.getElementById('watch5_quan').innerText = watch5;
+	} else {
+		document.getElementById('watch5_cart').style.display = 'none';
+	}
+}
+
+function remove_item(item,number) {
+	if (number == 5) {
+		localStorage.removeItem(item);
+	} else if (localStorage.getItem(item) == 1) {
+		localStorage.removeItem(item);
+	} else {
+		var amount = parseInt(localStorage.getItem(item))-number;
+		localStorage.setItem(item,amount);
+	}
+}
+
+function g_total() {
+	var watch1 = localStorage.getItem('watch1');
+	var watch2 = localStorage.getItem('watch2');
+	var watch3 = localStorage.getItem('watch3');
+	var watch4 = localStorage.getItem('watch4');
+	var watch5 = localStorage.getItem('watch5');
+	var g_total = (watch1*5999)+(watch2*7995)+(watch3*2099)+(watch4*359)+(watch5*415)
+	document.getElementById('grand_price').innerText = g_total;
+}
+
+function buy() {
+	if (t_items()==0) {
+		alert('There are no item in the cart.')
+	} else {
+		remove_item('watch1',5);
+		remove_item('watch2',5);
+		remove_item('watch3',5);
+		remove_item('watch4',5);
+		remove_item('watch5',5);
+		load_cart();
+		document.getElementById('thanks').style.display = 'block';
+		document.getElementById('side_grand').style.display = 'none';
+	}
 }

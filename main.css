@@ -158,8 +158,28 @@ body {
 	border-radius: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-bottom: 10px;
 }
 
 .sidebar:hover {
 	box-shadow: 5px 5px 5px gray;
+}
+
+button {
+	border: 1px solid black;
+	font-family: Quicksand;
+	background-color: white;
+	font-weight: bold;
+}
+
+.thanks {
+	z-index: 20;
+	top: 110px;
+	right: 20px;
+	position: fixed;
+	background-color: #00ff00;
+	border-radius: 3px;
+	font-weight: bold;
+	padding: 10px;
+	display: none;
 }
