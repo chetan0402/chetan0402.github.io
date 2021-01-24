@@ -157,3 +157,10 @@ function buy() {
 		document.getElementById('side_grand').style.display = 'none';
 	}
 }
+
+function need_help() {
+	document.getElementById('help').style.display = 'none';
+	$('#help_btn').click(function() {
+		document.getElementById('help').style.display = 'block';
+	});
+}

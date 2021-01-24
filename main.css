@@ -183,3 +183,11 @@ button {
 	padding: 10px;
 	display: none;
 }
+
+#help {
+	font-weight: bold;
+}
+
+#help_btn {
+	text-decoration: underline;
+}

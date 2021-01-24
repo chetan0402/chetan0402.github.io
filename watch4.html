@@ -12,7 +12,7 @@
 			display: block
 	</style>
 </head>
-<body onload="load_name();t_items();">
+<body onload="load_name();t_items();need_help();">
 	<div class="topnav">
 		<a href="welcome.html">Home</a>
 		<div class="topnav-right">
@@ -41,7 +41,9 @@
 			<option value="5">5</option>
 		</select><br>
 		<button onclick="add_cart('watch4');t_items();">Add to cart</button><br>
-		<a href="cart.html"><button>Total Items in cart:- <span id="no_items"></span></button></a>
+		<a href="cart.html"><button>Total Items in cart:- <span id="no_items"></span></button></a><br><br>
+		<a id="help_btn">Need Help?</a>
+		<p id="help">Click on the "Total Items in cart" button to go to the cart.</p>
 	</div>
 	<script src="main.js"></script>
 </body>
