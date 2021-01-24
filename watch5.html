@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regarder</title>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<style type="text/css">
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			display: block
+	</style>
+</head>
+<body onload="load_name();t_items();need_help();">
+	<div class="topnav">
+		<a href="welcome.html">Home</a>
+		<div class="topnav-right">
+			<a id="email"></a>
+			<a href="login.html" id="login">Login</a>
+			<a onclick="log_out();" id="log_out">Log out</a>
+		</div>
+	</div><br><br>
+	<div class="product_img" style="max-width: 400px;">
+		<img src="watch5.jpg">
+	</div>
+	<div class="sidebar">
+		<h1>SKMEI Digital Dial</h1>
+		<ul>
+			<li>Dial color: black, case shape: round, dial glass material: mineral</li>
+			<li>Band color: black, band material: silicone</li>
+			<li>Watch movement type, watch display type: digital</li>
+			<li>Case material: plastic, case diameter: 50 millimeters ,Case Thickness :15 Millimeters ,Band<br>Width :22 Millimeters</li>
+			<li>Water resistance depth: 50 meters, buckle clasp</li>
+			<li>Complete Calendar, Chronograph, Week Display, LED Display, Countdown ; Movement: Digital<br>Movement ; Band Material Type: Silica gel</li>
+			<li>6 months manufacturer warranty on manufacturing defects</li>
+		</ul>
+		Total Price:- &#8377;<span id="price">415</span><br>
+		<label for="quantity">Quantity:-</label>
+		<select id="quantity" onclick="load_price(415)">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select><br>
+		<button onclick="add_cart('watch5');t_items();">Add to cart</button><br>
+		<a href="cart.html"><button>Total Items in cart:- <span id="no_items"></span></button></a><br><br>
+		<a id="help_btn">Need Help?</a>
+		<p id="help">Click on the "Total Items in cart" button to go to the cart.</p>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
